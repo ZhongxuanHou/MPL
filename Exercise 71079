@@ -6,8 +6,8 @@ A password consists of only letters and digits.
 
 A password must contain at least two digits.
 
-	import java.util.Scanner;
-	public class CheckPassword{
+import java.util.Scanner;
+public class CheckPassword{
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter a password:");
