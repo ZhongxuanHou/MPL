@@ -1,0 +1,44 @@
+6-18) (Check password) Some websites impose certain rules for passwords. Write a method  that checks whether  a string  is a valid password. Suppose  the password rules are as follows:
+
+A password must have at least eight characters .
+
+A password consists of only letters and digits.
+
+A password must contain at least two digits.
+
+	import java.util.Scanner;
+	public class CheckPassword{
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		System.out.print("Enter a password:");
+		String password = input.next();
+		boolean valid = true;
+		int count = 0;
+		
+		if((password.length()>= 8)){
+			for(int i=0; i<password.length(); i++){
+				char ch = password.charAt(i);
+				if(Character.isDigit(ch)){
+					count +=1;
+				}
+				if((Character.isDigit(ch) == false) && (Character.isLetter(ch) == false)){
+					valid = false;
+				} 
+					
+			}
+			
+			if(valid){
+				if(count >= 2){
+					System.out.print("Valid Password");
+				} else{
+					System.out.print("Invalid Password");
+				}
+				
+			} else{
+				System.out.print("Invalid Password");
+			}
+		}else{
+			System.out.print("Invalid Password");
+		}
+	}
+}
