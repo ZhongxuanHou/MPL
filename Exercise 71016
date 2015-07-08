@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Multiples{
+	public static void main(String[] args){
+		Scanner input = new Scanner(System.in);
+		String ch = "";
+		do{
+			System.out.print("Enter one number:");
+			int num1 = input.nextInt();
+			System.out.print("Enter a second number:");
+			int num2 = input.nextInt();
+			isMultiple(num1,num2);
+			System.out.print("Do you want to enter another pair(y/n)?");
+			ch = input.next();
+		} while(ch.equals("y"));
+	}
+		
+	public static void isMultiple(int a, int b){	
+		if(b%a ==0){
+			System.out.println(b + " is a multiple of " + a);
+		} else{
+			System.out.println(b + " is not a multiple of " + a);
+		}
+	}
+}
